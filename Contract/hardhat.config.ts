@@ -3,7 +3,10 @@ import "@nomicfoundation/hardhat-toolbox";
 import * as env from 'dotenv';
 env.config();
 
-const {DEFAULT_PRIVATE_KEY, ETHERSCAN_API_KEY} = process.env
+const ARBITRUM_SEPOLIA_URL: string = process.env.ARBITRUM_SEPOLIA_URL ?? "";
+const DEFAULT_PRIVATE_KEY: string = process.env.DEFAULT_PRIVATE_KEY ?? "";
+const ETHERSCAN_API_KEY: string = process.env.ETHERSCAN_API_KEY ?? "";
+
 const config: HardhatUserConfig = {
   solidity: "0.8.20",
   gasReporter: {
